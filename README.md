@@ -9,6 +9,15 @@ Modificação do prototype de uma classe para substituir os métodos originais a
 1) Typescript decorator na classe
 2) Inicialização no constructor da classe
 
+## Estrutura e arquivos
+
+Dentro da pasta `src/services/logging` estão os arquivos com a estratégia aplicada. Foram criadas duas classes: `GreeterService` e `TalkerService` que simulam classes de serviço com suas devidas funcionalidades.
+
+A classe `TalkerService` teve seu prototype modificado através de um decorator que aciona a função de modificação.
+A classe `GreeterService` teve seu prototype modificado através da chamada da função de modificação no seu constructor e a injeção de um serviço de log customizado (`LoggerService`).
+
+No arquivo `src/main.ts` está a criação das instâncias das classes de serviço e as chamadas de seus métodos.
+
 ## Objetivos e resultados
 
 | Informações a serem capturadas                          | Resultado |
@@ -25,14 +34,7 @@ Modificação do prototype de uma classe para substituir os métodos originais a
 | Log automático de `info` após chamada bem sucedida do método  | ✅ |
 | Log automático de `error` após chamada mal sucedida do método | ✅ |
 
-## Estrutura e arquivos
-
-Dentro da pasta `src/services/logging` estão os arquivos com a estratégia aplicada. Foram criadas duas classes: `GreeterService` e `TalkerService` que simulam classes de serviço com suas devidas funcionalidades.
-
-A classe `TalkerService` teve seu prototype modificado através de um decorator que aciona a função de modificação.
-A classe `GreeterService` teve seu prototype modificado através da chamada da função de modificação no seu constructor e a injeção de um serviço de log customizado (`LoggerService`).
-
-No arquivo `src/main.ts` está a criação das instâncias das classes de serviço e as chamadas de seus métodos.
+![Resultados da POC](https://github.com/gangelus/auto-logging-poc/blob/main/resultados.png?raw=true)  
 
 ## Instalação e execução
 
